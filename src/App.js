@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import useRandomJoke from "./Custom Hook/useRandomJoke";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const joke = useRandomJoke();
+    return (
+        <div>
+            <center>
+                <h1>The Joke Generator</h1>
+                <h5>{joke}</h5>
+                <button>Generate Joke</button>
+            </center>
+        </div>
+    );
 }
 
 export default App;
